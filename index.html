@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+           padding: 50px;
+        }
+        .byg{
+            background-color: black;
+            color: #fff;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            border: 1px solid;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .logo{
+            font-size: 30px;
+            font-weight: 600;
+        }
+        header{
+            height: 10%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        ul{
+            width: 60%;
+            display: flex;
+            text-decoration: none;
+            list-style: none;
+            justify-content: space-between;
+        }
+        .dark{
+            height: 30px;
+            width: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+            padding: 0px 5px;
+        }
+        .dark img{
+            height: 20px;
+        }
+        .icon{
+            height: 30px;
+            width: 20px;
+            display: grid;
+            cursor: pointer;
+            place-items: center;
+            transition: all 0.5s ease-in-out;
+        }
+        .ic{
+            transform: translateX(25px);   
+        }
+        .icon1{
+            position: absolute;
+            opacity: 0;
+            
+        }
+        .icon2{
+            position: absolute;
+            z-index: 0;
+        }
+        .main{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .main p{
+            margin-top: 20px;
+        }
+        .main h2{
+            margin-top: 50px;
+        }
+        .main-el:nth-child(1){
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            align-items: center;
+        }
+        .main-ph{
+            height: 200px;
+            border-radius: 10px;
+            border:1px solid;
+        }
+        .main button{
+            height: 30px;
+            width: 150px;
+            background-color: transparent;
+            border: 1px solid;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+        .butt{
+            color: #fff;
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+<body class="by">
+    <div class="container">
+        <header>
+            <div class="logo">IND</div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+                <li>Projects</li>
+                 <div class="dark">
+                    <div class="icon">
+                    <img src="sun.png" alt="" style="z-index: 2;" class="icon1">
+                    <img src="moon.png" alt="" class="icon2">
+                </div>
+                 </div>
+            </ul>
+        </header>
+        <div class="main">
+            <div class="main-el">
+                <h2>
+                 Welcome To coding World
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ullam in delectus sapiente asperiores sit, amet officia vel quaerat deleniti eaque, molestiae et? Ad voluptatem dolorem voluptas odit doloremque atque?</p>
+                <button id="but">View More</button>
+            </div>
+            <div class="main-el">
+                <img class="main-ph" src="PhotoRoom-20231227_171017.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        let button=document.querySelector(".icon");
+        let by=document.querySelector(".by");
+        let ik=document.querySelector(".icon1");
+        let but=document.querySelector("#but");
+        button.addEventListener('click',()=>{
+            button.classList.toggle("ic");
+            by.classList.toggle("byg");
+            ik.classList.toggle("icon1");
+            but.classList.toggle("butt")
+        })
+    </script>
+</body>
+</html>
